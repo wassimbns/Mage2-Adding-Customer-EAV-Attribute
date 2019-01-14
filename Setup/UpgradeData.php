@@ -23,7 +23,7 @@ use Magento\Framework\Setup\UpgradeDataInterface;
         $this->customerSetupFactory = $customerSetupFactory;
         $this->attributeSetFactory = $attributeSetFactory;
     
-        if (version_compare($context->getVersion(), '2.2.1', '<')) {
+        if (version_compare($context->getVersion(), '1.0.1', '<')) {
             $this->upgradeCustomerPatent($customerSetup);
         }
 

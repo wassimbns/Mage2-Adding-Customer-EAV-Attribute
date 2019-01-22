@@ -65,9 +65,7 @@ use Magento\Framework\Setup\UpgradeDataInterface;
         $attribute = $customerSetup->getEavConfig()->getAttribute(Customer::ENTITY, $attributeCode);
         $attribute->addData([
             'attribute_set_id'   => $attributeSetId,
-            'attribute_set_id' => $attributeSetId,
             'attribute_group_id' => $attributeGroupId,
-            'used_in_forms'      => ['adminhtml_customer'],
             'used_in_forms' => ['adminhtml_customer', 'customer_account_edit'],
         ]);
         $attribute->save();
